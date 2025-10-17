@@ -1,3 +1,33 @@
+# Autopilot com modificações para o projeto Agriwing
+
+Esse fork tem modificações para executar a simulação de um drone X500
+
+## Configuração
+
+trocar para branch "release/1.16"
+
+```bash
+git switch release/1.16
+```
+
+sync submodules
+
+```bash
+git submodule update --init --recursive
+```
+
+build px4 software in the loop
+
+```bash
+make px4_sitl gz_x500_mono_cam_down
+```
+
+setup envar do "mundo" da simulação
+
+```bash
+export PX4_GZ_WORLD=agriwing
+```
+
 # PX4 Drone Autopilot
 
 [![Releases](https://img.shields.io/github/release/PX4/PX4-Autopilot.svg)](https://github.com/PX4/PX4-Autopilot/releases) [![DOI](https://zenodo.org/badge/22634/PX4/PX4-Autopilot.svg)](https://zenodo.org/badge/latestdoi/22634/PX4/PX4-Autopilot)
