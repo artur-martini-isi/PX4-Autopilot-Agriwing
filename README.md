@@ -1,6 +1,7 @@
 # Autopilot com modificações para o projeto Agriwing
 
-Esse fork tem modificações para executar a simulação de um drone X500
+Esse fork tem modificações para executar a simulação de um drone X500.
+Testado com pop-os 22.04.
 
 ## dependências
 
@@ -28,7 +29,7 @@ copy custom models
 ./agriwing-simulation/scripts/copy_models.py
 ```
 
-build px4 software in the loop
+build px4 software in the loop, na raiz do repo
 
 ```bash
 make px4_sitl gz_x500_mono_cam_down
