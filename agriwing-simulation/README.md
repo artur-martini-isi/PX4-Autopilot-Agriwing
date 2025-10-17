@@ -1,0 +1,43 @@
+# Agriwing-simulator
+
+gazebo
+
+## Setup
+
+clone px4-autopilot and switch to release/1.16 branch
+
+```bash
+git clone https://github.com/PX4/PX4-Autopilot.git
+git switch release/1.16
+```
+
+copy agriwing custom models and world to PX4-Autopilot project
+
+setup the simulation world
+
+```bash
+export PX4_GZ_WORLD=agriwing
+```
+
+run the simulation
+
+```bash
+make px4_sitl gz_x500_mono_cam_down
+```
+
+run gz-ros bridge
+
+```bash
+python3 gz_cam_bridge.py
+```
+
+---
+
+## TODO
+
+- [x] Adicionar base de docagem com marcadores
+- [ ] Adicionar marcadores vermelhos
+- [ ] Adicionar eletrodo
+- [ ] Adicionar laser-scan para simular distance sensor / tf-luna
+- [ ] Adicionar plantação simplificada
+ 

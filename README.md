@@ -2,9 +2,16 @@
 
 Esse fork tem modificações para executar a simulação de um drone X500
 
+## dependências
+
+Instalar no host (com ubuntu 22.04 ou 24.04)
+
+- [pixi](https://pixi.sh/latest/installation/)
+- [gz harmonic](https://gazebosim.org/docs/harmonic/install_ubuntu/)
+
 ## Configuração
 
-trocar para branch "release/1.16"
+trocar para branch "release/1.16" (versão utilizada no projeto)
 
 ```bash
 git switch release/1.16
@@ -14,6 +21,11 @@ sync submodules
 
 ```bash
 git submodule update --init --recursive
+```
+
+copy custom models
+```bash
+./agriwing-simulation/scripts/copy_models.py
 ```
 
 build px4 software in the loop
@@ -26,6 +38,24 @@ setup envar do "mundo" da simulação
 
 ```bash
 export PX4_GZ_WORLD=agriwing
+```
+
+## Executar simulação
+
+```bash
+make px4_sitl gz_x500_mono_cam_down
+```
+
+acionar o env pixi
+
+```bash
+pixi shell
+```
+
+script para publicar as imagens do gazebo num tópico do ROS2
+
+```bash
+python3 agriwing-simulation/scripts/gz_cam_bridge.py
 ```
 
 # PX4 Drone Autopilot
