@@ -91,8 +91,14 @@
       <elevation>0</elevation>
     </spherical_coordinates>
 
+    <!-- Agriwing Docking Base simplify to 3 aruco markers -->
     <include>
       <uri>model://agriwing/docking_base</uri>
+    </include>
+
+    <!-- Agriwing red squares for crop_detector testing -->
+    <include>
+      <uri>model://agriwing/red_squares</uri>
     </include>
   </world>
 </sdf>
