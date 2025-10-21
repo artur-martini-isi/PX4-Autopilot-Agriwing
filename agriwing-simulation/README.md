@@ -4,16 +4,26 @@ gazebo
 
 ## Setup
 
-clone px4-autopilot and switch to release/1.16 branch
+Clone px4-autopilot and switch to release/1.16 branch
 
 ```bash
 git clone https://github.com/PX4/PX4-Autopilot.git
 git switch release/1.16
 ```
 
-copy agriwing custom models and world to PX4-Autopilot project
+Clonar demais repositórios
 
-setup the simulation world
+```bash
+git submodule update --init --recursive
+```
+
+Copy agriwing custom models and world to PX4-Autopilot project
+
+```bash
+./agriwing-simulation/scripts/copy_models.sh
+```
+
+Setup the simulation world
 
 ```bash
 export PX4_GZ_WORLD=agriwing
@@ -40,4 +50,3 @@ python3 gz_cam_bridge.py
 - [ ] Adicionar eletrodo
 - [ ] Adicionar laser-scan para simular distance sensor / tf-luna
 - [ ] Adicionar plantação simplificada
- 
