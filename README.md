@@ -26,7 +26,7 @@ git submodule update --init --recursive
 
 copy custom models
 ```bash
-./agriwing-simulation/scripts/copy_models.py
+./agriwing-simulation/scripts/copy_models.sh
 ```
 
 build px4 software in the loop, na raiz do repo
