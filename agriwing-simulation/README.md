@@ -1,6 +1,11 @@
 # Agriwing-simulator
 
-gazebo
+## Dependências
+
+Instalar no host (com ubuntu 22.04 ou 24.04)
+
+- [pixi](https://pixi.sh/latest/installation/)
+- [gz harmonic](https://gazebosim.org/docs/harmonic/install_ubuntu/)
 
 ## Setup
 
@@ -22,6 +27,8 @@ Copy agriwing custom models and world to PX4-Autopilot project
 ```bash
 ./agriwing-simulation/scripts/copy_models.sh
 ```
+
+Substituir arquivo do airframe em /models
 
 Setup the simulation world
 
